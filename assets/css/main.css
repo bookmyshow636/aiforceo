@@ -5305,7 +5305,8 @@ span {
 }
 @media (max-width: 991px) {
   .hero-1 {
-    padding: 170px 0 80px;
+    /* padding: 170px 0 80px; */
+    padding: 170px 0 0px;
   }
 }
 .hero-1 .hero-content {
