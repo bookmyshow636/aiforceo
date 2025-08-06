@@ -38,6 +38,11 @@
     padding: 20px;
     }
 
+      .flipped-180 {
+    /* transform: rotate(0deg); */
+     transform: scaleX(-1);
+       transition: transform 0.5s;
+  }
 
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -109,10 +114,18 @@
       <div class="col-md-6" data-aos="zoom-in">
         <img src="humanoid-robot-programming-code.jpg" alt="People" class="img-fluid rounded">
       </div>
+      <style>.bbs{
+        color:red !important;
+      }
+      .blu{
+        color:blue !important;
+
+      }
+        </style>
       <div class="col-md-6">
         <div class="register-box shadow" data-aos="fade-left">
-          <h5>Stop Working Harder — Use AI to Start Earning Smart</h5>
-          <p>Friday, August 8th - 7:00 PM IST</p>
+          <h5 class="bbs">Stop Working Harder — Use AI to Start Earning Smart</h5>
+          <p class="blu">Friday, August 8th - 7:00 PM IST</p>
           <form>
             <input type="text" class="form-control mb-2" placeholder="Name">
             <input type="email" class="form-control mb-2" placeholder="Email">
@@ -124,6 +137,39 @@
     </div>
   </div>
 </section>
+
+    <!--<< Mouse Cursor Start >>-->
+    <div class="mouse-cursor cursor-outer"></div>
+    <div class="mouse-cursor cursor-inner"></div>
+
+    <!-- Back To Top start -->
+    <button id="back-top" class="back-to-top">
+        <i class="fa-regular fa-arrow-up"></i>
+    </button>
+
+
+    <!-- Hero Section Start -->
+    <section class="hero-secton hero-1 bg-cover" style="background-image: url('assets/img/hero/hero-bg-3.png');">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="hero-content">
+                        <div class="color-bg">
+                            <img src="assets/img/hero/color-bg.png" alt="img">
+                        </div>
+                        <p class="wow fadeInUp">TPEG Intelligent Solution</p>
+                        <h1 class="wow img-custom-anim-left" data-wow-duration="1.5s" data-wow-delay="0.1s">
+                            Innovative <img src="assets/img/hero/radius-img.png" alt="img">
+                            <b>AI</b> <span class="text-2">solutions</span>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-image img-custom-anim-left bg-cover"
+            style="background-image: url('assets/img/hero/hero-1.png');">
+        </div>
+    </section>
 
 <!-- Secrets Section -->
 <section class="secrets">
@@ -161,11 +207,56 @@
 </section>
 
 <style>
+  /* Fading background main container */
   .mm {
+    position: relative;
     background-image: url('01a.jpg');
     background-repeat: no-repeat;
+    /* background-position: center center; */
+    background-size: cover;
+    height: 100vh;
+    animation: fadeInBg 2s ease-in-out;
+    overflow: hidden;
+  }
+
+  /* Animated overlay (rotating lines) */
+  .mm::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/img/brectangle_3.png');
+    background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover; /* or 100% 100% */
+    background-size: contain;
+    background-color: #3333334a; /* translucent dark overlay */
+    animation: rotateBg 50s linear infinite;
+    z-index: 1;
+  }
+
+  /* Optional: content inside .mm stays above overlay */
+  .mm > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Fade-in animation for background */
+  @keyframes fadeInBg {
+    0% {
+      opacity: 0;
+      transform: scale(1.05);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  /* Rotation animation */
+  @keyframes rotateBg {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
   }
 </style>
 
@@ -199,6 +290,55 @@
       </div>
     </div>
   </div>
+
+ 
+<div class="container my-5">
+  <!-- <div class="row text-center mb-4">
+    <h2>🧠 Your AI Learning Journey: Before vs After</h2>
+  </div> -->
+
+  <div class="row g-4">
+    <!-- BEFORE -->
+    <div class="col-md-6">
+      <div class="before-box shadow">
+        <h4 class="mb-3 ">🔴 Before Learning AI Tools</h4>
+        <ul class="list-unstyled">
+          <li>I didn’t know what tools like ChatGPT or Gemini could do.</li>
+          <li>I thought Midjourney and DALL·E were only for designers.</li>
+          <li>I had no idea that AI could increase my income.</li>
+          <li>I felt hesitant to learn new online tools.</li>
+          <li>I didn’t understand how to use AI in digital marketing, blogging, or data analysis.</li>
+          <li>I never imagined AI could improve productivity in jobs or business.</li>
+          <li>I believed coding was required to learn AI.</li>
+          <li>I was stuck in one profession, thinking that’s my only option.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- AFTER -->
+    <div class="col-md-6">
+      <div class="after-box shadow">
+        <h4 class="mb-3">✅ After Joining the AI Program</h4>
+        <ul class="list-unstyled">
+          <li>I now use ChatGPT, Gemini & DALL·E to generate ideas and content.</li>
+          <li>I understand how AI can help me earn ₹10–20 lakhs annually.</li>
+          <li>I’ve seen how AI can automate my business like a 24x7 assistant.</li>
+          <li>I use AI in digital marketing, YouTube, and data analysis confidently.</li>
+          <li>Learning tools online feels exciting now.</li>
+          <li>I’ve explored multiple career paths using AI.</li>
+          <li>I know AI doesn't need coding – tools are beginner-friendly.</li>
+          <li>I dedicate time weekly to grow and master AI skills.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
 </section>
 
 <style>
@@ -869,6 +1009,230 @@
         </div>
     </section>
 
+  <!-- Project Section Start -->
+    <section class="project-section-6 section-padding fix header-bg-6">
+        <div class="section-title style-6 text-center">
+            <h6 class="wow fadeInUp">
+               Project MindSync
+            </h6>
+            <h2 class="text-white wow fadeInUp" data-wow-delay=".3s">
+                Project EduAI
+            </h2>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-4 col-lg-6 col-md-6">
+                    <div class="prpject-card-items-6">
+                        <div class="project-image">
+                            <img src="assets/img/home-6/project/01.jpg" alt="img">
+                            <div class="project-content">
+                                <p>Concept Art</p>
+                                <h3>
+                                    <a href="project-details.html">Military artistic women</a>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 col-md-6">
+                    <div class="prpject-card-items-6">
+                        <div class="project-image">
+                            <img src="assets/img/home-6/project/02.jpg" alt="img">
+                            <div class="project-content">
+                                <p>Concept Art</p>
+                                <h3>
+                                    <a href="project-details.html">Military artistic women</a>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 col-md-6">
+                    <div class="prpject-card-items-6">
+                        <div class="project-image">
+                            <img src="assets/img/home-6/project/03.jpg" alt="img">
+                            <div class="project-content">
+                                <p>Concept Art</p>
+                                <h3>
+                                    <a href="project-details.html">Military artistic women</a>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- About Section Start -->
+    <section class="about-section section-padding fix bg-cover" style="background-image: url(assets/img/home-6/about/bg.jpg);">
+        <div class="container">
+            <div class="about-wrapper-6">
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="about-image">
+                            <img src="assets/img/home-6/about/01.jpg" alt="img" class="wow img-custom-anim-top" data-wow-duration="1.3s" data-wow-delay="0.3s">
+                            <div class="about-image-2 wow img-custom-anim-right" data-wow-duration="1.3s" data-wow-delay="0.3s">
+                                <img src="assets/img/home-6/about/02.jpg" alt="img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="about-content">
+                            <div class="section-title style-6 mb-0">
+                                <h6 class="wow fadeInUp" data-wow-delay=".3s">
+                                    About Us
+                                </h6>
+                                <h2 class="text-white wow fadeInUp" data-wow-delay=".5s">
+                                    Building the Future of Education
+                                </h2>
+                            </div>
+                            <p class="text wow fadeInUp" data-wow-delay=".3s">
+                                We combine artificial intelligence with educational expertise to create smart, adaptive learning environments that inspire growth, personalize instruction, and prepare students for a rapidly changing world.
+                            </p>
+                            <div class="about-content-item wow fadeInUp" data-wow-delay=".5s">
+                                <div class="count-item">
+                                    <h2><span class="count">590</span>+</h2>
+                                    <p>
+                                        Satisfied <br> Students
+                                    </p>
+                                </div>
+                                <div class="about-item">
+                                    <div class="about-icon-item">
+                                    <div class="icon">
+                                        <i class="fa fa-graduation-cap"></i>
+                                    </div>
+                                    <div class="content">
+                                        <h5>Skill Scholarships</h5>
+                                        <p>
+                                            After all, what's the issue with bad rent by real in? However, she lived despite the fact that
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="about-icon-item mb-0">
+                                    <div class="icon">
+                                        <i class="fas fa-handshake"></i>
+                                    </div>
+                                    <div class="content">
+                                        <h5>Our Commitment</h5>
+                                        <p>
+                                            After all, what's the issue with bad rent by real in? However, she lived despite the fact that
+                                        </p>
+                                    </div>
+                                 </div>
+                                </div>
+                            </div>
+                            <a href="about.html" class="theme-btn wow fadeInUp" data-wow-delay=".3s">
+                                More about us <i class="fa-sharp fa-regular fa-arrow-up-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What-offer Section Start -->
+    <section class="what-offer-section section-padding fix header-bg-6">
+        <div class="container">
+            <div class="offer-wrapper-6">
+                <div class="row g-4">
+                    <div class="col-xl-4">
+                        <div class="offer-content">
+                            <div class="section-title style-6 mb-0">
+                                <h6 class="wow fadeInUp">
+                                    What We Offer
+                                </h6>
+                                <h2 class="text-white wow fadeInUp" data-wow-delay=".3s">
+                                    Smart Education Services
+                                </h2>
+                            </div>
+                            <p class="text wow fadeInUp" data-wow-delay=".5s">
+                                Our AI-driven education services deliver personalized learning, real-time insights, and adaptive tools that support students, 
+                            </p>
+                            <div class="array-buttons wow fadeInUp" data-wow-delay=".3s">
+                                <button class="array-prev"><i class="fas fa-arrow-left"></i></button>
+                                <button class="array-next"><i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-8">
+                        <div class="swiper offer-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="offer-box-item-6">
+                                        <div class="icon">
+                                            <img src="assets/img/home-6/icon/01.svg" alt="img">
+                                        </div>
+                                        <div class="content">
+                                            <h4>
+                                                Personalized Learning <br> Paths
+                                            </h4>
+                                            <p>
+                                                AI tailors course content and pace to each student's 
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="offer-box-item-6 style-6">
+                                        <div class="icon">
+                                            <img src="assets/img/home-6/icon/02.svg" alt="img">
+                                        </div>
+                                        <div class="content">
+                                            <h4>
+                                                Intelligent Tutoring <br> Systems
+                                            </h4>
+                                            <p>
+                                                Virtual tutors that provide instant feedback 
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="offer-box-item-6 style-6">
+                                        <div class="icon">
+                                            <img src="assets/img/home-6/icon/03.svg" alt="img">
+                                        </div>
+                                        <div class="content">
+                                            <h4>
+                                                AI-Powered Content <br> Creation
+                                            </h4>
+                                            <p>
+                                                Generate custom quizzes, study materials, and lesson.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+        <!-- Cta Discuss Section Start -->
+    <section class="cta-discuss-section fix section-padding bg-cover"
+        style="background-image: url('assets/img/cta-discuss-bg.jpg');">
+        <div class="container">
+            <div class="cta-discuss-content">
+                <h2>
+                    Let’s discuss how we <br>
+                    <span>support <b>creative</b> vision</span>
+                </h2>
+                <p>
+                    Unlock the power of AI to generate the
+                    high-quality images and videos in few seconds
+                </p>
+                <a href="contact.html" class="theme-btn">contact us <i
+                        class="fa-sharp fa-regular fa-arrow-up-right"></i></a>
+            </div>
+        </div>
+    </section>
+
 
         <!-- Faq Section Start -->
     <section class="faq-section fix section-padding nn">
@@ -950,6 +1314,98 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Contact Section Start -->
+    <section class="contact-section fix style-padding section-padding bg-cover"
+        style="background-image: url('assets/img/contact-bg.jpg');">
+        <div class="container">
+            <div class="section-title ml-200">
+                <h6 class="wow fadeInUp">
+                    <img src="assets/img/star.png" alt="img"> contact with us
+                </h6>
+                <h2 class="wow fadeInUp" data-wow-delay=".3s">
+                    Contact our experts <br> <span>any <b>assistance</b> you need</span>
+                </h2>
+            </div>
+            <div class="contact-wrapper">
+                <div class="row align-items-center">
+                    
+                    <div class="col-lg-8">
+                        <div class="contact-form-items-area">
+                            <h2 class="wow fadeInUp" data-wow-delay=".3s">Get in touch</h2>
+                            <form action="https://aiforge.baseecom.com/contact.php" id="contact-form" method="POST" class="contact-form-items">
+                                <div class="row g-4">
+                                    <div class="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
+                                        <div class="form-clt">
+                                            <div class="icon">
+                                                <i class="fa-regular fa-user"></i>
+                                            </div>
+                                            <input type="text" name="name" id="name" placeholder="Your name">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 wow fadeInUp" data-wow-delay=".5s">
+                                        <div class="form-clt">
+                                            <div class="icon">
+                                                <i class="fa-regular fa-phone"></i>
+                                            </div>
+                                            <input type="text" name="phone" id="phone" placeholder="Phone">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
+                                        <div class="form-clt">
+                                            <div class="icon">
+                                                <i class="fa-regular fa-envelope"></i>
+                                            </div>
+                                            <input type="text" name="email" id="email12" placeholder="Email here">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 wow fadeInUp" data-wow-delay=".5s">
+                                        <div class="form-clt">
+                                            <div class="nice-select" tabindex="0">
+                                                <span class="current">
+                                                    Subject
+                                                </span>
+                                                <ul class="list">
+                                                    <li data-value="1" class="option selected">
+                                                        01
+                                                    </li>
+                                                    <li data-value="1" class="option">
+                                                        02
+                                                    </li>
+                                                    <li data-value="1" class="option">
+                                                        03
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 wow fadeInUp" data-wow-delay=".3s">
+                                        <div class="form-clt">
+                                            <textarea name="message" id="message"
+                                                placeholder="Write your comment"></textarea>
+                                            <div class="icon">
+                                                <i class="fa-regular fa-comment"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-7 wow fadeInUp" data-wow-delay=".5s">
+                                        <button type="submit" class="theme-btn">
+                                            Send message <i class="fa-sharp fa-regular fa-arrow-up-right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="contact-image">
+                            <img src="assets/img/contac-img-2.jpg" class="img-fluid flipped-180" alt="img">
                         </div>
                     </div>
                 </div>
